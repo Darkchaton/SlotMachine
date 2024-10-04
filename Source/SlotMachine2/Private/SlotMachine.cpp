@@ -16,7 +16,8 @@ ASlotMachine::ASlotMachine()
 	InitialRotation = FRotator::ZeroRotator;
 	//TargetRotation = FRotator(0.f, 90.f, 0.f);
 	LerpAlpha = 0.f;
-	bIsRotating = false; 
+	bIsRotating = false;
+	bIsReturning = false;
 	
 	//Slot machine
     SceneRoot = CreateDefaultSubobject<USceneComponent>(TEXT("SceneRoot"));
@@ -62,7 +63,9 @@ void ASlotMachine::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, c
 {
 	Super::NotifyHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
 	TargetRotation = FRotator(0.f, 0.f, 45.f);
+	LerpAlpha = 0.f; 
 	bIsRotating = true;
+	bIsReturning = false;
 }
 
 // Called when the game starts or when spawned
@@ -83,10 +86,23 @@ void ASlotMachine::Tick(float DeltaTime)
 		if (LerpAlpha >= 1.0f)
 		{
 			LerpAlpha = 1.0f;   
-			bIsRotating = false;  
+			bIsRotating = false;
+			bIsReturning = true;
 		}
  
 		FRotator NewRotation = FMath::Lerp(InitialRotation, TargetRotation, LerpAlpha);
+		LeverGroup->SetRelativeRotation(NewRotation);
+	}
+	else if (bIsReturning) 
+	{
+		LerpAlpha += DeltaTime;
+		if (LerpAlpha >= 1.0f)
+		{
+			LerpAlpha = 1.0f;
+			bIsReturning = false;  
+		}
+
+		FRotator NewRotation = FMath::Lerp(TargetRotation, InitialRotation, LerpAlpha);
 		LeverGroup->SetRelativeRotation(NewRotation);
 	}
 }
