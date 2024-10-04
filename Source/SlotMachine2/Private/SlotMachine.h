@@ -26,6 +26,13 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 private:
+	
+	FRotator InitialRotation;
+	FRotator TargetRotation;
+	float LerpAlpha;   
+	bool bIsRotating;
+	bool bIsReturning;
+	
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* SceneRoot;
 	
@@ -58,6 +65,9 @@ private:
 	
 	UPROPERTY(VisibleAnywhere)
     UStaticMeshComponent* MachineComp;
+
+	UPROPERTY(EditAnywhere)
+	UMaterial* CubeMaterial;
 
 	UPROPERTY(VisibleAnywhere)
 	class UNiagaraComponent* FeuxArtifice;

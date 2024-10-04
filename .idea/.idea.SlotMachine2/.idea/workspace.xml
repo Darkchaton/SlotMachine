@@ -13,8 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9f060de6-ad12-432c-bc09-5dfe2e0fe015" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SlotMachine2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SlotMachine2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_SlotMachine.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_SlotMachine.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/4/PT/ZXUQMNLL9GZ2UNQ5D0R4A4.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/4/PT/ZXUQMNLL9GZ2UNQ5D0R4A4.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/E/7C/TZCWLQLUZRSDBTSLU117GE.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SlotMachine2/Private/SlotMachine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SlotMachine2/Private/SlotMachine.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SlotMachine2/Private/SlotMachine.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SlotMachine2/Private/SlotMachine.h" afterDir="false" />
     </list>
@@ -495,7 +494,10 @@
       <workItem from="1727969389186" duration="1612000" />
       <workItem from="1727991166529" duration="1654000" />
       <workItem from="1727992942378" duration="1068000" />
-      <workItem from="1727994606785" duration="300000" />
+      <workItem from="1727994606785" duration="1105000" />
+      <workItem from="1727995799216" duration="3516000" />
+      <workItem from="1727999487320" duration="730000" />
+      <workItem from="1728000379579" duration="933000" />
     </task>
     <servers />
   </component>

@@ -1,17 +1,24 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "SlotMachine.h"
+#include "SlotMachine.h" 
 #include "NiagaraComponent.h"
 #include "Components/PrimitiveComponent.h"
-#include "Components/StaticMeshComponent.h"
 #include "Components/SceneComponent.h"
+#include "Components/StaticMeshComponent.h"
 
 // Sets default values
 ASlotMachine::ASlotMachine()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	//Variables
+	InitialRotation = FRotator::ZeroRotator;
+	//TargetRotation = FRotator(0.f, 90.f, 0.f);
+	LerpAlpha = 0.f;
+	bIsRotating = false; 
 	
+	//Slot machine
     SceneRoot = CreateDefaultSubobject<USceneComponent>(TEXT("SceneRoot"));
 	RootComponent = SceneRoot;
 
@@ -54,19 +61,33 @@ void ASlotMachine::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, c
 	bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
 {
 	Super::NotifyHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
-	UE_LOG(LogTemp, Warning, TEXT("Collision connectée"));
+	TargetRotation = FRotator(0.f, 0.f, 45.f);
+	bIsRotating = true;
 }
 
 // Called when the game starts or when spawned
 void ASlotMachine::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	InitialRotation = LeverGroup->GetRelativeRotation();
 }
 
 // Called every frame
 void ASlotMachine::Tick(float DeltaTime)
 {
-	Super::Tick(DeltaTime); 
+	Super::Tick(DeltaTime);
+	
+	if (bIsRotating)
+	{ 
+		LerpAlpha += DeltaTime;   
+		if (LerpAlpha >= 1.0f)
+		{
+			LerpAlpha = 1.0f;   
+			bIsRotating = false;  
+		}
+ 
+		FRotator NewRotation = FMath::Lerp(InitialRotation, TargetRotation, LerpAlpha);
+		LeverGroup->SetRelativeRotation(NewRotation);
+	}
 }
 
