@@ -15,6 +15,9 @@ public:
 	// Sets default values for this actor's properties
 	ASlotMachine();
 
+	UFUNCTION()
+    void Spin(UStaticMeshComponent* Wheel);  
+
 	virtual void NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit) override;
 
 protected:
@@ -25,13 +28,16 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-private:
+private: 
 	
 	FRotator InitialRotation;
 	FRotator TargetRotation;
 	float LerpAlpha;   
 	bool bIsRotating;
 	bool bIsReturning;
+	 
+	//wheel
+	bool bIsWheelRotating; 
 	
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* SceneRoot;
@@ -66,8 +72,11 @@ private:
 	UPROPERTY(VisibleAnywhere)
     UStaticMeshComponent* MachineComp;
 
+	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent* LightComp;
+
 	UPROPERTY(EditAnywhere)
-	UMaterial* CubeMaterial;
+	UMaterial* LightMaterial;
 
 	UPROPERTY(VisibleAnywhere)
 	class UNiagaraComponent* FeuxArtifice;
