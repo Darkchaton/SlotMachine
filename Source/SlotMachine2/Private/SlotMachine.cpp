@@ -5,6 +5,8 @@
 #include "Components/PrimitiveComponent.h"
 #include "Components/SceneComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "Engine/World.h"
+#include "TimerManager.h"
 
 // Sets default values
 ASlotMachine::ASlotMachine()
@@ -60,8 +62,7 @@ ASlotMachine::ASlotMachine()
 
 	//Particules
 	FeuxArtifice =  CreateDefaultSubobject<UNiagaraComponent>(TEXT("FeuxArtifice"));
-	FeuxArtifice->SetupAttachment(CubeComp);
-
+	FeuxArtifice->SetupAttachment(CubeComp); 
 }
 
 //NOTIFY HIT
@@ -123,6 +124,7 @@ void ASlotMachine::Tick(float DeltaTime)
             Spin(WheelComp);
             Spin(Wheel1Comp);
             Spin(Wheel2Comp); 
+ 
         }
 }
 
@@ -130,11 +132,20 @@ void ASlotMachine::Tick(float DeltaTime)
 void ASlotMachine::Spin(UStaticMeshComponent* Wheel)
 {
     if (Wheel)
-    { 
-        int32 RandomInt = FMath::RandRange(0, 15); 
-        float NewRotationPitch = RandomInt * 22.5f; 
+    {
+	    int32 RandomInt = FMath::RandRange(0, 15); 
+    	float NewRotationPitch = RandomInt * 22.5f; 
     
-        Wheel->SetRelativeRotation(FRotator(0.f, NewRotationPitch, 0.f));
+    	Wheel->AddLocalRotation(FRotator(0.f, NewRotationPitch, 0.f));
+    	if (!GetWorld()->GetTimerManager().IsTimerActive(SpinTimerHandle))
+    	{
+    		GetWorld()->GetTimerManager().SetTimer(SpinTimerHandle, this, &ASlotMachine::StopWheelSpin, 3.0f, false); 
+    	}
     }
 } 
- 
+
+void ASlotMachine::StopWheelSpin()
+{
+	bIsWheelRotating = false;  
+	GetWorld()->GetTimerManager().ClearTimer(SpinTimerHandle);  
+}

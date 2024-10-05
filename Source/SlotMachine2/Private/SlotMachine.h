@@ -16,7 +16,10 @@ public:
 	ASlotMachine();
 
 	UFUNCTION()
-    void Spin(UStaticMeshComponent* Wheel);  
+    void Spin(UStaticMeshComponent* Wheel);
+
+	UFUNCTION()
+	void StopWheelSpin();  
 
 	virtual void NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit) override;
 
@@ -37,7 +40,8 @@ private:
 	bool bIsReturning;
 	 
 	//wheel
-	bool bIsWheelRotating; 
+	bool bIsWheelRotating;
+	FTimerHandle SpinTimerHandle;
 	
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* SceneRoot;

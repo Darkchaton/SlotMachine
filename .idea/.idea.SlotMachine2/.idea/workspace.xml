@@ -14,7 +14,6 @@
     <list default="true" id="9f060de6-ad12-432c-bc09-5dfe2e0fe015" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SlotMachine2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SlotMachine2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_SlotMachine2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_SlotMachine2.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/6/Y7/WX3E9Q5HJB2KGPFH4ARIR7.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/6/Y7/WX3E9Q5HJB2KGPFH4ARIR7.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SlotMachine2/Private/SlotMachine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SlotMachine2/Private/SlotMachine.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SlotMachine2/Private/SlotMachine.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SlotMachine2/Private/SlotMachine.h" afterDir="false" />
     </list>
@@ -503,6 +502,7 @@
       <workItem from="1728146665870" duration="8179000" />
       <workItem from="1728155023568" duration="795000" />
       <workItem from="1728155890448" duration="1196000" />
+      <workItem from="1728160727627" duration="1759000" />
     </task>
     <servers />
   </component>
