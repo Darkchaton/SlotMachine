@@ -16,7 +16,10 @@ public:
 	ASlotMachine();
 
 	UFUNCTION()
-    void Spin(UStaticMeshComponent* Wheel);
+    void Spin(UStaticMeshComponent* Wheel, int32 ReelIndex);
+
+	//UFUNCTION()
+	//void SpinWheels();
 
 	UFUNCTION()
 	void StopWheelSpin();  
@@ -41,7 +44,9 @@ private:
 	 
 	//wheel
 	bool bIsWheelRotating;
-	FTimerHandle SpinTimerHandle;
+	FTimerHandle SpinTimerHandle; 
+
+	int32 WheelPositions[3]; 
 	
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* SceneRoot;

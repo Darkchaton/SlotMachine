@@ -19,7 +19,9 @@ ASlotMachine::ASlotMachine()
 	LerpAlpha = 0.f;
 	bIsRotating = false;
 	bIsReturning = false; 
-	bIsWheelRotating= false; 
+	bIsWheelRotating= false;
+
+	FMemory::Memset(WheelPositions, -1, sizeof(WheelPositions));
 	
 	//Slot machine
     SceneRoot = CreateDefaultSubobject<USceneComponent>(TEXT("SceneRoot"));
@@ -75,8 +77,6 @@ void ASlotMachine::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, c
 	bIsRotating = true;
 	bIsReturning = false; 
 	bIsWheelRotating = true;
-	
-	    
 }
 
 // Called when the game starts or when spawned
@@ -120,32 +120,48 @@ void ASlotMachine::Tick(float DeltaTime)
 	
 	//Wheels
 	 if (bIsWheelRotating)
-        {
-            Spin(WheelComp);
-            Spin(Wheel1Comp);
-            Spin(Wheel2Comp); 
- 
-        }
+     {  
+	 	Spin(WheelComp, 0);   
+	 	Spin(Wheel1Comp, 1);  
+	 	Spin(Wheel2Comp, 2);
+     }
 }
 
 //Fonction pour faire tourner mes wheels
-void ASlotMachine::Spin(UStaticMeshComponent* Wheel)
+void ASlotMachine::Spin(UStaticMeshComponent* Wheel, int32 ReelIndex)
 {
     if (Wheel)
     {
-	    int32 RandomInt = FMath::RandRange(0, 15); 
-    	float NewRotationPitch = RandomInt * 22.5f; 
-    
+    	WheelPositions[ReelIndex] = FMath::RandRange(0, 15);
+    	float NewRotationPitch = WheelPositions[ReelIndex] * 22.5f;
+    	  
     	Wheel->AddLocalRotation(FRotator(0.f, NewRotationPitch, 0.f));
+    	 
     	if (!GetWorld()->GetTimerManager().IsTimerActive(SpinTimerHandle))
     	{
     		GetWorld()->GetTimerManager().SetTimer(SpinTimerHandle, this, &ASlotMachine::StopWheelSpin, 3.0f, false); 
-    	}
-    }
-} 
+    	}  
+    } 
+}
 
 void ASlotMachine::StopWheelSpin()
 {
-	bIsWheelRotating = false;  
+	bIsWheelRotating = false; 
+	UE_LOG(LogTemp, Warning, TEXT("Final Position for Wheel 0: %d"), WheelPositions[0]);
+	UE_LOG(LogTemp, Warning, TEXT("Final Position for Wheel 1: %d"), WheelPositions[1]);
+	UE_LOG(LogTemp, Warning, TEXT("Final Position for Wheel 2: %d"), WheelPositions[2]);
+
+	//(Ma wheel 0 est au début, ma wheel 2 est au milieu et ma wheel 1 est à la fin, désolée) pour le debug: 
+	if (WheelPositions[0] == WheelPositions[1]) // Compare la première et la deuxième roue 
+	//if (WheelPositions[0] == WheelPositions[1] && WheelPositions[0] == WheelPositions[2])  
+	{
+		UE_LOG(LogTemp, Warning, TEXT("WIN"));
+			 
+		FeuxArtifice->SetVariableFloat(TEXT("FeuxArtifice"), 100);
+		LightComp->SetMaterial(0, LightMaterial);
+	} 
+	else{
+			UE_LOG(LogTemp, Warning, TEXT("LOSE"));
+	}  
 	GetWorld()->GetTimerManager().ClearTimer(SpinTimerHandle);  
 }
