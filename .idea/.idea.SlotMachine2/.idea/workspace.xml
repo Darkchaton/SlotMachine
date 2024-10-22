@@ -13,7 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9f060de6-ad12-432c-bc09-5dfe2e0fe015" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SlotMachine2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SlotMachine2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SlotMachine2/Private/PlayerWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SlotMachine2/Private/PlayerWidget.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/WBP_PlayerWidget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/WBP_PlayerWidget.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -505,7 +505,7 @@
       <workItem from="1729378863497" duration="2218000" />
       <workItem from="1729381191880" duration="172000" />
       <workItem from="1729550207179" duration="4713000" />
-      <workItem from="1729558159906" duration="350000" />
+      <workItem from="1729558159906" duration="1210000" />
     </task>
     <servers />
   </component>
