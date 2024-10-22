@@ -13,7 +13,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9f060de6-ad12-432c-bc09-5dfe2e0fe015" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SlotMachine2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SlotMachine2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/WBP_PlayerWidget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/WBP_PlayerWidget.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Input/IMC_Default.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Input/IMC_Default.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SlotMachine2/SlotMachine2Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SlotMachine2/SlotMachine2Character.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SlotMachine2/SlotMachine2Character.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SlotMachine2/SlotMachine2Character.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +27,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SlotMachine2.uproject" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SlotMachine2/SlotMachine2.Build.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -36,20 +41,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "C++ Project.SlotMachine2.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C++ Project.SlotMachine2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="C++ Project.SlotMachine2">
     <configuration name="SlotMachine2" type="CppProject" factoryName="C++ Project">
       <configuration_1>
@@ -506,6 +511,15 @@
       <workItem from="1729381191880" duration="172000" />
       <workItem from="1729550207179" duration="4713000" />
       <workItem from="1729558159906" duration="1210000" />
+      <workItem from="1729622222155" duration="5561000" />
+      <workItem from="1729630622712" duration="1752000" />
+      <workItem from="1729633136240" duration="669000" />
+      <workItem from="1729633838752" duration="410000" />
+      <workItem from="1729634278391" duration="76000" />
+      <workItem from="1729634376325" duration="65000" />
+      <workItem from="1729634471241" duration="120000" />
+      <workItem from="1729634606581" duration="70000" />
+      <workItem from="1729634753861" duration="332000" />
     </task>
     <servers />
   </component>
