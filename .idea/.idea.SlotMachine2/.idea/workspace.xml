@@ -13,10 +13,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9f060de6-ad12-432c-bc09-5dfe2e0fe015" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SlotMachine2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SlotMachine2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_SlotMachine2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_SlotMachine2.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/6/Y7/WX3E9Q5HJB2KGPFH4ARIR7.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/6/Y7/WX3E9Q5HJB2KGPFH4ARIR7.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SlotMachine2/Private/SlotMachine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SlotMachine2/Private/SlotMachine.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SlotMachine2/Private/SlotMachine.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SlotMachine2/Private/SlotMachine.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/7/8K/0OLPBOSZCPU1X7E3PCLCGF.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SlotMachine2.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/SlotMachine2.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SlotMachine2/SlotMachine2Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SlotMachine2/SlotMachine2Character.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SlotMachine2/SlotMachine2Character.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SlotMachine2/SlotMachine2Character.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +42,9 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;C++ Project.SlotMachine2.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;fixdetachd&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -504,6 +506,9 @@
       <workItem from="1728155023568" duration="795000" />
       <workItem from="1728155890448" duration="1196000" />
       <workItem from="1728160727627" duration="13680000" />
+      <workItem from="1729378863497" duration="2218000" />
+      <workItem from="1729381191880" duration="172000" />
+      <workItem from="1729550207179" duration="4713000" />
     </task>
     <servers />
   </component>

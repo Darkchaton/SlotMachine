@@ -10,6 +10,10 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "Engine/LocalPlayer.h"
+#include "Blueprint/UserWidget.h" 
+#include "Components/Button.h" 
+#include "GameFramework/HUD.h"
+#include "PlayerWidget.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -42,6 +46,12 @@ void ASlotMachine2Character::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+	
+	//https://stackoverflow.com/questions/61024803/how-to-add-widget-in-unreal-engine
+	auto UserWidget = CreateWidget<UUserWidget>(GetWorld(), PlayerWidgetClass);
+	PlayerWidget = Cast<UPlayerWidget>(UserWidget); 
+	
+	PlayerWidget->AddToViewport();
 }
 
 //////////////////////////////////////////////////////////////////////////// Input
